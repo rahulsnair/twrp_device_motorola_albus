@@ -35,10 +35,10 @@ PRODUCT_COPY_FILES += \
     bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := sanders
-PRODUCT_NAME := omni_sanders
+PRODUCT_DEVICE := albus
+PRODUCT_NAME := omni_albus
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto G (5S) Plus
+PRODUCT_MODEL := Moto Z2 Play
 PRODUCT_MANUFACTURER := motorola
 
 

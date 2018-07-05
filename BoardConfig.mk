@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/motorola/sanders
+LOCAL_PATH := device/motorola/albus
 
 # Architecture
 TARGET_ARCH := arm64
@@ -45,18 +45,18 @@ BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
-BOARD_MKBOOTIMG_ARGS :=  --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --kernel_offset 0x00008000 --dt device/motorola/sanders/dt.img
-BOARD_CUSTOM_BOOTIMG_MK := device/motorola/sanders/mkbootimg.mk
-TARGET_PREBUILT_KERNEL := device/motorola/sanders/kernel
+BOARD_MKBOOTIMG_ARGS :=  --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --kernel_offset 0x00008000 --dt device/motorola/albus/dt.img
+BOARD_CUSTOM_BOOTIMG_MK := device/motorola/albus/mkbootimg.mk
+TARGET_PREBUILT_KERNEL := device/motorola/albus/kernel
 
 # Partitions
-BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
+BOARD_FLASH_BLOCK_SIZE := 131072                  # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216        #    16384 * 1024 mmcblk0p37
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 21073920    #    20580 * 1024 mmcblk0p38
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4294967296    #  4194304 * 1024 mmcblk0p53
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 56883133440 # 55549935 * 1024 mmcblk0p54
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5905580032    #  5767168 * 1024 mmcblk0p53
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 54668540928 # 53387247 * 1024 mmcblk0p54
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456      #   262144 * 1024 mmcblk0p52
-BOARD_OEMIMAGE_PARTITION_SIZE := 805306368        #   786432 * 1024 mmcblk0p51
+BOARD_OEMIMAGE_PARTITION_SIZE := 1409286144       #  1376256 * 1024 mmcblk0p51
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432     #    32768 * 1024 mmcblk0p30
 
 # Filesystems
@@ -65,7 +65,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/motorola/sanders/twrp.fstab
+TARGET_RECOVERY_FSTAB := device/motorola/albus/twrp.fstab
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # TWRP Configuration
